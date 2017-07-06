@@ -1,0 +1,18 @@
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <!-- add header -->
+
+    <a class="navbar-brand font_style" href="#"><span id="title_first">Movie</span><span id="title_second">Flix</span></a>
+
+    <ul id="navbar1" class="navbar-nav font_style nav nav-pills" >
+        <li ng-attr-class="{{movieListVm.active_tab==='movie' && 'active' }}" ><a href="#" ng-click="movieListVm.changeTabs('movie')">Movies</a></li>
+        <li ng-attr-class="{{movieListVm.active_tab==='tv' && 'active' }}" ><a href="#" ng-click="movieListVm.changeTabs('tv')" >TV Shows</a></li>
+    </ul>
+
+    <div class="collapse navbar-collapse" id="navbar1">
+        <ul class="nav navbar-nav pull-right user-settings">
+            <li><a href="index.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
+            <li><a href="index.html"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+        </ul>
+    </div>
+
+</nav>

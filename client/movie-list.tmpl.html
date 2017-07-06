@@ -1,0 +1,8 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="placeholders" >
+        <div class="col-sm-9 col-md-2 placeholder movie-list"  ng-repeat="movie in movieListVm.movies | filter: { type: movieListVm.active_tab }" >
+            <img ng-src="{{movie.poster}}" width="180" height="180" class="img-fluid" alt="Generic placeholder thumbnail">
+            <span ng:class="{true:'caption btn btn-primary btn-sm clicked', false:'caption btn btn-primary btn-sm'}[(movie.id===movieListVm.getActiveId())]" ng-click="movieListVm.setActiveId(movie.id)" data-toggle="modal" data-target="#myModal">{{movie.title}}</span>
+        </div>
+    </div>
+</div>
