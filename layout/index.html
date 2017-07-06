@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieflix">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- http://www.kodingmadesimple.com/2015/04/twitter-bootstrap-search-box-icon-navbar.html -->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- add header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand font_style" href="#"><span id="title_first">Movie</span><span id="title_second">Flix</span></a>
+        </div>
+
+        <!-- Add Header Menu Filter Options -->
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="nav navbar-nav font_style">
+                <li class="active"><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+            </ul>
+
+            <div class="row">
+                <ul class="nav navbar-nav pull-right user-settings">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
+                    <li><a href="index.html"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+                </ul>
+                <form class="navbar-form" role="search">
+                    <div class="input-group navbar-center">
+                        <input type="text" class="form-control" placeholder="Search By Title">
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                         <a class="font_style" id= "advanced_search" href="#" title="Filter Search based on Movie Attributes">Advanced Search</a>
+                    </span>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- add search form
+
+            -->
+
+
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <p class="font_style" id="side_title">Movie Info&nbsp; &nbsp;
+
+                <a href="#">
+                    <span class="glyphicon glyphicon-comment" title="Comments on Movie"></span>
+                </a>
+                &nbsp;&nbsp;
+                <a href="#">
+                    <span class="glyphicon glyphicon-sort" title="Rate the Movie"></span>
+                </a>
+            </p>
+
+            <p class="font_style side_subtitle">Title</p>
+            <p class="side_text">Get Out of Park</p>
+            <p class="font_style side_subtitle">Directors</p>
+            <p class="side_text">Joss Whedon</p>
+            <p class="font_style side_subtitle">Writors</p>
+            <p class="side_text">Joss Whedon, Stan Lee (Marvel comics), Jack Kirby (Marvel comics)</p>
+            <p class="font_style side_subtitle">Actors</p>
+            <p class="side_text">Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans</p>
+            <p class="font_style side_subtitle">Plot</p>
+            <p class="side_text">When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans.</p>
+            <p class="font_style side_subtitle">Genre</p>
+            <p class="side_text">Action, Adventure, Sci-Fi</p>
+            <p class="font_style side_subtitle">Year</p>
+            <p class="side_text">2013</p>
+            <p class="font_style side_subtitle">Rating</p>
+            <p class="side_text">PG-13</p>
+            <p class="font_style side_subtitle">Runtime</p>
+            <p class="side_text">131 Min</p>
+            <p class="font_style side_subtitle">Language</p>
+            <p class="side_text">English</p>
+            <p class="font_style side_subtitle">Country</p>
+            <p class="side_text">USA</p>
+            <p class="font_style side_subtitle">Awards</p>
+            <p class="side_text">1 win & 12 nominations.</p>
+            <p class="font_style side_subtitle">Stats</p>
+            <p class="side_text">1 win & 12 nominations.</p>
+        </div>
+
+        <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main pull-right">
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image12_4.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Get out of Park</h4>
+                    <span class="text-muted">3.6</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image11_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <span class="caption btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">The Walking Dead</span>
+
+                    <div id="stars-existing">
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star"></span>
+                        <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty"></span>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image10_2.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <span class="caption btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">The Walking Dead</span>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image9_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Doctor Who</h4>
+                    <div id="stars-existin" class="starrr" data-rating='4'></div>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image8_3.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Malcolm in the Middle</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image7.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Orphan Black</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image3_9.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Suits</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image6_2.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Glee</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image12_4.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image11_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image10_2.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image9_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image8_3.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image7.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image3_9.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image6_2.jpg" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image12_4.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image11_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image10_2.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="https://imgh.us/image9_1.jpg" width="220" height="220" class="img-fluid" alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+<script src="movieflix.module.js"></script>
+</body>
+</html>
